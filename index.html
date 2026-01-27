@@ -567,28 +567,27 @@
 
 
     <!-- Google Sheet Script -->
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwLBmLw5r04MDov2dArV0qHWTQC125pgrduuzAMGnzOiVRLiYroSMKlZNRwREhIJg9r/exec";
-      const form = document.getElementById("contactForm");
+   <script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwLBmLw5r04MDov2dArV0qHWTQC125pgrduuzAMGnzOiVRLiYroSMKlZNRwREhIJg9r/exec";
+  const form = document.getElementById("contactForm");
 
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-        const formData = new FormData(form);
+    fetch(scriptURL, {
+      method: "POST",
+      body: new FormData(form),
+      mode: "no-cors"
+    });
 
-        fetch(scriptURL, {
-          method: "POST",
-          body: formData,
-          mode: "no-cors",
-        });
+    alert("✅ Thank you! Your inquiry has been submitted.");
+    form.reset();
+  });
+</script>
 
-        alert("✅ Thank you! Your inquiry has been submitted.");
-        form.reset();
-      });
-    </script>
   </body>
 </html>
+
 
 
 

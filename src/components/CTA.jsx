@@ -15,7 +15,7 @@
 export default function CTA(){
   return (
     <div className="cta-band">
-      <h3>Ready to Build Your Next Product?</h3>
+      <h3>Ready to Build Your Next Product ?</h3>
       <p>Let's turn your vision into reality with our expert development team.</p>
       <div style={{marginTop:12}}>
         <a className="btn-primary" href="#contact">Start Your Project Today</a>

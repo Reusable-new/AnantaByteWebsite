@@ -1,0 +1,69 @@
+import React from 'react'
+
+export default function Terms() {
+  return (
+    <div>
+      <header className="tos-header">
+        <div className="header-container">
+          <h1>Terms of Service</h1>
+          <p>Last updated: January 2026</p>
+        </div>
+      </header>
+
+      <section className="tos-content">
+        <div className="tos-container">
+          <p>
+            Welcome to <strong>Ananta Byte</strong>. These Terms of Service (“Terms”) govern your access to and use of our website and services. By accessing or using our services, you agree to be bound by these Terms.
+          </p>
+
+          <h2>1. Acceptance of Terms</h2>
+          <p>By using our website or services, you confirm that you have read, understood, and agree to comply with these Terms. If you do not agree, you must not use our services.</p>
+
+          <h2>2. Services</h2>
+          <p>Ananta Byte provides software development, mobile application development, UI/UX design, API integration, and related digital services. Service details, timelines, and deliverables may vary based on project scope and agreements.</p>
+
+          <h2>3. User Responsibilities</h2>
+          <ul>
+            <li>Provide accurate and complete information when required</li>
+            <li>Use our services only for lawful purposes</li>
+            <li>Not attempt to disrupt, damage, or misuse our systems</li>
+          </ul>
+
+          <h2>4. Intellectual Property</h2>
+          <p>All content, designs, code, trademarks, logos, and materials available on this website are the intellectual property of Ananta Byte unless stated otherwise. Unauthorized use is strictly prohibited.</p>
+
+          <h2>5. Payments & Billing</h2>
+          <p>Payment terms, pricing, and billing schedules will be defined in individual project agreements or invoices. Failure to make payments on time may result in service suspension or termination.</p>
+
+          <h2>6. Confidentiality</h2>
+          <p>Both parties agree to maintain the confidentiality of any proprietary or confidential information shared during the course of a project.</p>
+
+          <h2>7. Limitation of Liability</h2>
+          <p>Ananta Byte shall not be liable for any indirect, incidental, special, or consequential damages arising from the use or inability to use our services.</p>
+
+          <h2>8. Termination</h2>
+          <p>We reserve the right to suspend or terminate access to our services at any time if these Terms are violated or if misuse is detected.</p>
+
+          <h2>9. Third-Party Services</h2>
+          <p>Our services may integrate or link to third-party tools or platforms. Ananta Byte is not responsible for the content, policies, or practices of such third parties.</p>
+
+          <h2>10. Changes to Terms</h2>
+          <p>We may update these Terms from time to time. Any changes will be posted on this page with an updated revision date.</p>
+
+          <h2>11. Governing Law</h2>
+          <p>These Terms shall be governed and interpreted in accordance with the laws of India, without regard to conflict of law principles.</p>
+
+          <h2>12. Contact Information</h2>
+          <p>If you have any questions regarding these Terms of Service, please contact us at:</p>
+
+          <div className="contact-box">
+            <p><strong>Email:</strong> contact@anantabyte.com</p>
+            <p><strong>Company:</strong> AnantaByte</p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="tos-footer">© 2024 Ananta Byte. All rights reserved.</footer>
+    </div>
+  )
+}

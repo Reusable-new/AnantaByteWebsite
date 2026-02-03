@@ -1,0 +1,1 @@
+Place your website images (logo.png, favicon-32x32.png, favicon-16x16.png, apple-touch-icon.png, etc.) in this folder. In React the files are referenced as `/image/<filename>` (for example: `/image/logo.png`).

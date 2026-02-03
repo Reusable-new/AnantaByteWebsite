@@ -2,7 +2,10 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-container">
-        <div style={{ fontWeight: 800, color: "#a78bfa" }}>Antanta Byte</div>
+        <a className="brand" href="/#home">
+          <img className="brand-logo" src="/image/logo.png" alt="AnantaByte logo" />
+          <span>Antanta Byte</span>
+        </a>
 
         <nav className="nav-links">
           <a href="/#home">Home</a>

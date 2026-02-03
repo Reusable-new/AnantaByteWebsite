@@ -5,7 +5,10 @@ export default function Footer(){
     <footer className="site-footer">
       <div className="footer-grid">
         <div className="footer-col">
-          <h5>Ananta Byte</h5>
+          <div className="footer-brand">
+            <img className="footer-logo" src="/image/logo.png" alt="image/logo.png" />
+            <h5>Ananta Byte</h5>
+          </div>
           <p>Building the future, one product at a time.</p>
           <p style={{marginTop:10}}>
             📧 <a href="mailto:contact@anantabyte.com">contact@anantabyte.com</a><br />

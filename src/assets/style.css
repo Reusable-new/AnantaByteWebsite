@@ -257,6 +257,8 @@ body{
   background:linear-gradient(180deg, var(--section-c) 0%, #05070f 100%);
 }
 .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.footer-logo{width:34px;height:34px;object-fit:contain;border-radius:8px}
 .footer-col h5{color:var(--text);margin:0 0 10px}
 .footer-col p, .footer-col a{color:var(--muted);text-decoration:none;font-size:13px}
 .footer-col a:hover{color:var(--accent2)}

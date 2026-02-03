@@ -3,7 +3,7 @@ export default function Navbar() {
     <header className="navbar">
       <div className="nav-container">
         <a className="brand" href="/#home">
-          <img className="brand-logo" src="/image/logo.png" alt="AnantaByte logo" />
+          <img className="brand-logo" src="/image/logo.png" alt="image/logo.png" />
           <span>Antanta Byte</span>
         </a>
 

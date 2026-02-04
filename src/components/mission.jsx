@@ -57,7 +57,7 @@ export default function Mission() {
 
           <div className="about-stats" ref={statsRef}>
             <div className="stat">
-              <span data-target="150" data-suffix="+">0</span>
+              <span data-target="5" data-suffix="+">0</span>
               <p>Projects Delivered</p>
             </div>
             <div className="stat">
@@ -71,7 +71,7 @@ export default function Mission() {
           </div>
         </div>
 
-        <img className="about-visual" src="/image/hero-mockup.svg" alt="Mission dashboard" />
+        <img className="about-visual" src="/image/mission-illustration.svg" alt="Mission illustration" loading="lazy" />
       </div>
     </section>
   );

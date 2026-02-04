@@ -1,8 +1,14 @@
 import React from 'react'
+import SEO from '../components/SEO'
 
 export default function Privacy() {
   return (
     <div>
+      <SEO
+        title="Privacy Policy | AnantaByte"
+        description="Read the AnantaByte privacy policy and learn how we collect, use, and protect your information."
+        path="/privacy"
+      />
       <header className="policy-header">
         <div className="header-container">
           <h1>Privacy Policy</h1>

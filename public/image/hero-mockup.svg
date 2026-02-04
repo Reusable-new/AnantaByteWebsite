@@ -5,7 +5,7 @@
       <stop offset="1" stop-color="#06b6d4" />
     </linearGradient>
   </defs>
-  <rect width="640" height="400" rx="18" fill="#0b0d14" stroke="url(#g)" stroke-width="6" />
+  <rect width="640" height="400" rx="18" fill="none" stroke="url(#g)" stroke-width="6" />
   <g fill="#fff" opacity="0.06">
     <rect x="24" y="24" width="220" height="24" rx="6" />
     <rect x="24" y="60" width="160" height="6" rx="3" />
@@ -13,6 +13,6 @@
     <rect x="260" y="60" width="200" height="6" rx="3" />
   </g>
   <g transform="translate(36,96)">
-    <rect x="0" y="0" width="560" height="260" rx="12" fill="url(#g)" opacity="0.12"/>
+    <rect x="0" y="0" width="560" height="260" rx="12" fill="url(#g)" opacity="0.08"/>
   </g>
 </svg>

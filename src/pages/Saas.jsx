@@ -1,8 +1,14 @@
 import React from 'react'
+import SEO from '../components/SEO'
 
 export default function Saas() {
   return (
     <section className="services-section">
+      <SEO
+        title="SaaS Development Services | AnantaByte"
+        description="Custom SaaS application development for startups and enterprises. Scalable, secure, and user-friendly platforms built by AnantaByte."
+        path="/saas"
+      />
       <h1>SaaS Application Development Services</h1>
 
       <p>

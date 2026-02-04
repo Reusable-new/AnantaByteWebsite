@@ -6,7 +6,7 @@ export default function Footer(){
       <div className="footer-grid">
         <div className="footer-col">
           <div className="footer-brand">
-            <img className="footer-logo" src="/image/logo.png" alt="image/logo.png" />
+            <img className="footer-logo" src="/image/logo.png" alt="image/logo.png" loading="lazy" />
             <h5>Ananta Byte</h5>
           </div>
           <p>Building the future, one product at a time.</p>

@@ -35,7 +35,7 @@ function TestCard({ name, role, text, img }) {
   return (
     <div className="test-card">
       <div className="meta">
-        <img src={img} alt={name} />
+        <img src={img} alt={name} loading="lazy" />
         <div>
           <strong>{name}</strong>
           <div style={{ fontSize: 12, color: "var(--muted)" }}>{role}</div>

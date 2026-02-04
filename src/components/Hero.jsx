@@ -18,7 +18,11 @@ export default function Hero(){
       </div>
 
       <div className="hero-right">
-        <img className="hero-mockup" src="/image/hero-mockup.svg" alt="product mockup" />
+        <div className="hero-mockup">
+          <img className="hero-frame" src="/image/hero-mockup.svg" alt="product mockup frame" />
+          <img className="hero-screen" src="/image/hero-screen.svg" alt="product preview" />
+          <img className="hero-illustration" src="/image/hero-illustration.svg" alt="Hero illustration" loading="lazy" />
+        </div>
       </div>
     </section>
   )

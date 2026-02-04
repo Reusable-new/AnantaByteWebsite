@@ -1,8 +1,14 @@
 import React from 'react'
+import SEO from '../components/SEO'
 
 export default function Terms() {
   return (
     <div>
+      <SEO
+        title="Terms of Service | AnantaByte"
+        description="Review AnantaByte's terms of service for using our website and software development services."
+        path="/terms"
+      />
       <header className="tos-header">
         <div className="header-container">
           <h1>Terms of Service</h1>

@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
@@ -30,6 +31,16 @@ function Home() {
 }
 
 export default function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("config", "G-YM2SM80M0B", {
+        page_path: location.pathname + location.search + location.hash,
+      });
+    }
+  }, [location]);
+
   return (
     <>
       <Navbar />

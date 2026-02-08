@@ -18,7 +18,7 @@ export default function CTA(){
       <h3>Ready to Build Your Next Product ?</h3>
       <p>Let's turn your vision into reality with our expert development team.</p>
       <div style={{marginTop:12}}>
-        <a className="btn-primary" href="#contact">Start Your Project Today</a>
+        <a className="btn-primary" href="#contact" data-cta="CTA Start Project" data-cta-location="cta">Start Your Project Today</a>
       </div>
     </div>
   )

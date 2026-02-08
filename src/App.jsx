@@ -11,10 +11,21 @@ import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import SEO from "./components/SEO";
+import { trackCtaClick, trackPageView, trackScrollDepth } from "./utils/analytics";
 
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const Saas = lazy(() => import("./pages/Saas"));
+const WebDevelopment = lazy(() => import("./pages/WebDevelopment"));
+const MobileAppDevelopment = lazy(() => import("./pages/MobileAppDevelopment"));
+const AiMlDevelopment = lazy(() => import("./pages/AiMlDevelopment"));
+const UiUxDesign = lazy(() => import("./pages/UiUxDesign"));
+const FintechSoftware = lazy(() => import("./pages/FintechSoftware"));
+const HealthcareSoftware = lazy(() => import("./pages/HealthcareSoftware"));
+const WebDevelopmentBengaluru = lazy(() => import("./pages/WebDevelopmentBengaluru"));
+const SoftwareDevelopmentDelhi = lazy(() => import("./pages/SoftwareDevelopmentDelhi"));
+const SaasMvpGuide = lazy(() => import("./pages/SaasMvpGuide"));
+const ProductDiscoveryWorkshop = lazy(() => import("./pages/ProductDiscoveryWorkshop"));
 
 const SITE_URL = import.meta.env.VITE_SITE_URL || "https://anantabyte.com";
 
@@ -38,6 +49,50 @@ function Home() {
           target: `${SITE_URL}/?q={search_term_string}`,
           "query-input": "required name=search_term_string"
         }
+      },
+      {
+        "@type": "Service",
+        name: "Web Development",
+        serviceType: "Web Development",
+        provider: {
+          "@type": "Organization",
+          name: "AnantaByte",
+          url: SITE_URL
+        },
+        areaServed: "Worldwide"
+      },
+      {
+        "@type": "Service",
+        name: "SaaS Development",
+        serviceType: "SaaS Application Development",
+        provider: {
+          "@type": "Organization",
+          name: "AnantaByte",
+          url: SITE_URL
+        },
+        areaServed: "Worldwide"
+      },
+      {
+        "@type": "Service",
+        name: "AI Chatbot Development",
+        serviceType: "AI Chatbot Development",
+        provider: {
+          "@type": "Organization",
+          name: "AnantaByte",
+          url: SITE_URL
+        },
+        areaServed: "Worldwide"
+      },
+      {
+        "@type": "Service",
+        name: "Mobile App Development",
+        serviceType: "Mobile App Development",
+        provider: {
+          "@type": "Organization",
+          name: "AnantaByte",
+          url: SITE_URL
+        },
+        areaServed: "Worldwide"
       }
     ]
   };
@@ -67,12 +122,51 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag("config", "G-YM2SM80M0B", {
-        page_path: location.pathname + location.search + location.hash,
+    const path = location.pathname + location.search + location.hash;
+    const title = document.title;
+    trackPageView({ path, title });
+
+    const thresholds = [25, 50, 75, 100];
+    const fired = new Set();
+
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      if (scrollHeight <= 0) return;
+      const percent = Math.round((scrollTop / scrollHeight) * 100);
+
+      thresholds.forEach((threshold) => {
+        if (percent >= threshold && !fired.has(threshold)) {
+          fired.add(threshold);
+          trackScrollDepth(threshold);
+        }
       });
-    }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
   }, [location]);
+
+  useEffect(() => {
+    const onClick = (event) => {
+      const target = event.target.closest("a,button");
+      if (!target) return;
+
+      const isCta = target.dataset.cta || target.classList.contains("btn-primary");
+      if (!isCta) return;
+
+      const label = target.dataset.cta || target.textContent?.trim() || "CTA";
+      const ctaLocation = target.dataset.ctaLocation || location.pathname;
+      const href = target.getAttribute("href") || "";
+      trackCtaClick({ label, location: ctaLocation, href });
+    };
+
+    window.addEventListener("click", onClick);
+    return () => window.removeEventListener("click", onClick);
+  }, [location.pathname]);
 
   return (
     <>
@@ -83,6 +177,16 @@ export default function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/saas" element={<Saas />} />
+          <Route path="/web-development" element={<WebDevelopment />} />
+          <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
+          <Route path="/ai-ml-development" element={<AiMlDevelopment />} />
+          <Route path="/ui-ux-design" element={<UiUxDesign />} />
+          <Route path="/fintech-software-development" element={<FintechSoftware />} />
+          <Route path="/healthcare-software-development" element={<HealthcareSoftware />} />
+          <Route path="/web-development-bengaluru" element={<WebDevelopmentBengaluru />} />
+          <Route path="/software-development-delhi" element={<SoftwareDevelopmentDelhi />} />
+          <Route path="/saas-mvp-guide" element={<SaasMvpGuide />} />
+          <Route path="/product-discovery-workshop" element={<ProductDiscoveryWorkshop />} />
         </Routes>
       </Suspense>
     </>

@@ -15,7 +15,7 @@ export default function Navbar() {
           <a href="/#contact">Contact</a>
         </nav>
 
-        <a className="btn-getstarted" href="/#contact">Get Started</a>
+        <a className="btn-getstarted" href="/#contact" data-cta="Navbar Get Started" data-cta-location="navbar">Get Started</a>
       </div>
     </header>
   );

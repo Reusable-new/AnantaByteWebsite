@@ -18,15 +18,21 @@ export default function Footer(){
         <div className="footer-col">
           <h5>Company</h5>
           <a href="/#about">About Us</a><br />
+          <a href="/web-development-bengaluru">Bengaluru</a><br />
+          <a href="/software-development-delhi">Delhi</a>
         </div>
         <div className="footer-col">
           <h5>Services</h5>
-          <a href="/#services">Web Development</a><br />
-          <a href="/#services">Mobile Apps</a><br />
+          <a href="/web-development">Web Development</a><br />
+          <a href="/mobile-app-development">Mobile App Development</a><br />
+          <a href="/ai-ml-development">AI and ML Development</a><br />
+          <a href="/ui-ux-design">UI UX Design</a><br />
           <a href="/saas">SaaS Development</a>
         </div>
         <div className="footer-col">
           <h5>Resources</h5>
+          <a href="/saas-mvp-guide">SaaS MVP Guide</a><br />
+          <a href="/product-discovery-workshop">Product Discovery Workshop</a><br />
           <a href="/privacy">Privacy</a><br />
           <a href="/terms">Terms</a><br />
           <a href="/#contact">Contact</a>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { trackFormError, trackFormSubmit, trackFormSuccess } from "../utils/analytics";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -10,6 +11,7 @@ export default function Contact() {
 
     if (isSubmitting) return
     setIsSubmitting(true)
+    trackFormSubmit({ formId: "contact" })
 
     try {
       const res = await fetch(
@@ -30,12 +32,15 @@ export default function Contact() {
       const isOpaque = res.type === "opaque"
 
       if ((res.ok || isOpaque) && !lower.startsWith("error")) {
+        trackFormSuccess({ formId: "contact" })
         alert("✅ Thanks! We’ve received your inquiry and will get back to you shortly.")
         form.reset()
       } else {
+        trackFormError({ formId: "contact", error: text || "submission_failed" })
         alert(`❌ ${text || "Submission failed. Please try again in a moment."}`)
       }
     } catch (err) {
+      trackFormError({ formId: "contact", error: "network_error" })
       alert("❌ Submission failed. Please try again in a moment.")
     } finally {
       setIsSubmitting(false)

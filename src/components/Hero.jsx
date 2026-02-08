@@ -8,8 +8,8 @@ export default function Hero(){
         <p>End-to-end product development for startups and growing businesses. We build beautiful, high-performance apps that scale.</p>
 
         <div className="hero-buttons">
-          <a className="btn-primary" href="#contact">Get Started</a>
-          <a className="btn-secondary" href="#services">View Services</a>
+          <a className="btn-primary" href="#contact" data-cta="Hero Get Started" data-cta-location="hero">Get Started</a>
+          <a className="btn-secondary" href="#services" data-cta="Hero View Services" data-cta-location="hero">View Services</a>
         </div>
 
         <div style={{marginTop:22, color:'var(--muted)', fontSize:14}}>

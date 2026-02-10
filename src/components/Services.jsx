@@ -34,24 +34,28 @@
 //   )
 // }
 
-function ServiceCard({ bg, icon, title, text }) {
-  return (
+import { Link } from "react-router-dom";
+
+function ServiceCard({ bg, icon, title, text, to }) {
+  const card = (
     <div className="service-card">
       <div className="icon" style={{ background: bg }}>{icon}</div>
       <h3>{title}</h3>
       <p style={{ marginTop: 6, color: "var(--muted)", fontSize: 14 }}>{text}</p>
     </div>
-  )
+  );
+
+  return to ? <Link to={to} className="service-link">{card}</Link> : card;
 }
 
 export default function Services() {
   const items = [
-    { bg: "linear-gradient(90deg,#3b82f6,#60a5fa)", icon: "🌐", title: "Web Development", text: "Modern, responsive websites and web applications." },
-    { bg: "linear-gradient(90deg,#06b6d4,#22d3ee)", icon: "📱", title: "Mobile App Development", text: "Native and cross-platform apps for iOS and Android." },
-    { bg: "linear-gradient(90deg,#ec4899,#f472b6)", icon: "🤖", title: "AI Chatbot Development", text: "Intelligent chatbots for support, sales, and automation." },
-    { bg: "linear-gradient(90deg,#38bdf8,#0ea5e9)", icon: "☁️", title: "SaaS Application Development", text: "Scalable SaaS platforms with secure multi-tenant architecture." },
-    { bg: "linear-gradient(90deg,#a855f7,#7c3aed)", icon: "🎨", title: "UI/UX Design", text: "User-centered design that improves engagement and conversion." },
-    { bg: "linear-gradient(90deg,#22c55e,#4ade80)", icon: "🧪", title: "QA & Testing", text: "Comprehensive testing to ensure quality and reliability." }
+    { bg: "linear-gradient(90deg,#3b82f6,#60a5fa)", icon: "🌐", title: "Web Development", text: "Modern, responsive websites and web applications.", to: "/web-development" },
+    { bg: "linear-gradient(90deg,#06b6d4,#22d3ee)", icon: "📱", title: "Mobile App Development", text: "Native and cross-platform apps for iOS and Android.", to: "/mobile-app-development" },
+    { bg: "linear-gradient(90deg,#ec4899,#f472b6)", icon: "🤖", title: "AI Chatbot Development", text: "Intelligent chatbots for support, sales, and automation.", to: "/ai-ml-development" },
+    { bg: "linear-gradient(90deg,#38bdf8,#0ea5e9)", icon: "☁️", title: "SaaS Application Development", text: "Scalable SaaS platforms with secure multi-tenant architecture.", to: "/saas" },
+    { bg: "linear-gradient(90deg,#a855f7,#7c3aed)", icon: "🎨", title: "UI/UX Design", text: "User-centered design that improves engagement and conversion.", to: "/ui-ux-design" },
+    { bg: "linear-gradient(90deg,#22c55e,#4ade80)", icon: "🧪", title: "QA & Testing", text: "Comprehensive testing to ensure quality and reliability.", to: "/qa-testing" }
   ]
 
   return (
@@ -61,7 +65,7 @@ export default function Services() {
 
       <div className="services-grid">
         {items.map((it, idx) => (
-          <ServiceCard key={idx} bg={it.bg} icon={it.icon} title={it.title} text={it.text} />
+          <ServiceCard key={idx} bg={it.bg} icon={it.icon} title={it.title} text={it.text} to={it.to} />
         ))}
       </div>
     </section>

@@ -1,6 +1,7 @@
 import { useEffect, Suspense, lazy } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import ContactModal from "./components/ContactModal";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import WhyChoose from "./components/WhyChoose";
@@ -20,6 +21,7 @@ const WebDevelopment = lazy(() => import("./pages/WebDevelopment"));
 const MobileAppDevelopment = lazy(() => import("./pages/MobileAppDevelopment"));
 const AiMlDevelopment = lazy(() => import("./pages/AiMlDevelopment"));
 const UiUxDesign = lazy(() => import("./pages/UiUxDesign"));
+const QaTesting = lazy(() => import("./pages/QaTesting"));
 const FintechSoftware = lazy(() => import("./pages/FintechSoftware"));
 const HealthcareSoftware = lazy(() => import("./pages/HealthcareSoftware"));
 const WebDevelopmentBengaluru = lazy(() => import("./pages/WebDevelopmentBengaluru"));
@@ -171,6 +173,7 @@ export default function App() {
   return (
     <>
       <Navbar />
+      <ContactModal />
       <Suspense fallback={<div style={{ padding: "80px 24px", textAlign: "center" }}>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -181,6 +184,7 @@ export default function App() {
           <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
           <Route path="/ai-ml-development" element={<AiMlDevelopment />} />
           <Route path="/ui-ux-design" element={<UiUxDesign />} />
+          <Route path="/qa-testing" element={<QaTesting />} />
           <Route path="/fintech-software-development" element={<FintechSoftware />} />
           <Route path="/healthcare-software-development" element={<HealthcareSoftware />} />
           <Route path="/web-development-bengaluru" element={<WebDevelopmentBengaluru />} />

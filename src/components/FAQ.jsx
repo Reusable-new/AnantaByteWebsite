@@ -31,19 +31,19 @@
 
 import { useState } from "react";
 
-const items = [
+const defaultItems = [
   { q: "What services does Ananta Byte offer?", a: "We offer web development, mobile apps, SaaS, AI chatbots, UI/UX and more." },
   { q: "Do you build custom SaaS products?", a: "Yes — we design scalable multi-tenant SaaS systems and subscription flows." },
   { q: "Can you integrate AI chatbots?", a: "Absolutely. We build NLP-based chatbots that integrate with sites and CRMs." },
   { q: "What is your development process?", a: "We follow iterative, Agile-friendly sprints with clear milestones and delivery." }
 ]
 
-export default function FAQ() {
+export default function FAQ({ items = defaultItems, title = "Frequently Asked Questions", subtitle = "Everything you need to know about our services" }) {
   const [open, setOpen] = useState(null)
   return (
     <section className="faq-section">
-      <h2 style={{ textAlign: "center" }}>Frequently Asked Questions</h2>
-      <p style={{ textAlign: "center", color: "var(--muted)" }}>Everything you need to know about our services</p>
+      <h2 style={{ textAlign: "center" }}>{title}</h2>
+      <p style={{ textAlign: "center", color: "var(--muted)" }}>{subtitle}</p>
 
       <div style={{ maxWidth: 800, margin: "20px auto" }}>
         {items.map((it, i) => (

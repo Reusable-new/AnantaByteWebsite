@@ -157,12 +157,18 @@ export default function App() {
       const target = event.target.closest("a,button");
       if (!target) return;
 
+      // If a link targets the contact fragment, open the contact modal instead
+      const href = target.getAttribute("href") || "";
+      if (href && href.includes("#contact")) {
+        event.preventDefault();
+        window.dispatchEvent(new CustomEvent("open-contact"));
+      }
+
       const isCta = target.dataset.cta || target.classList.contains("btn-primary");
       if (!isCta) return;
 
       const label = target.dataset.cta || target.textContent?.trim() || "CTA";
       const ctaLocation = target.dataset.ctaLocation || location.pathname;
-      const href = target.getAttribute("href") || "";
       trackCtaClick({ label, location: ctaLocation, href });
     };
 

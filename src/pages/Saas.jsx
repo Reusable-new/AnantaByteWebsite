@@ -1,6 +1,7 @@
 import React from 'react'
 import SEO from '../components/SEO'
 import { Link, useNavigate } from 'react-router-dom'
+import FAQ from "../components/FAQ";
 
 function openContact() {
   window.dispatchEvent(new CustomEvent('open-contact'));
@@ -12,15 +13,15 @@ export default function Saas() {
   return (
     <main className="seo-page">
       <SEO
-        title="SaaS Development Services | AnantaByte"
-        description="Custom SaaS application development for startups and enterprises. Scalable, secure, and user-friendly platforms built by AnantaByte."
+        title="SaaS Development Services | Multi-Tenant SaaS Apps | AnantaByte"
+        description="SaaS development services for scalable, secure products using multi-tenant architecture, AWS, Docker, Kubernetes, and CI/CD."
         path="/saas"
         image="/image/saas-og.svg"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Service",
           name: "SaaS Development",
-          description: "SaaS product development, multi-tenant architecture, subscription systems, and scalability.",
+          description: "SaaS product development with multi-tenant architecture, scalable cloud infrastructure, and secure billing.",
           url: "https://anantabyte.com/saas",
           provider: { "@type": "Organization", name: "AnantaByte", url: "https://anantabyte.com" }
         }}
@@ -69,6 +70,35 @@ export default function Saas() {
 
       <section className="seo-section">
         <div className="seo-container">
+          <h2>Technologies we use for SaaS development</h2>
+          <p>Our SaaS development services focus on cloud-native delivery, multi-tenant architecture, and automation so your platform scales securely.</p>
+          <div className="tech-grid">
+            <article className="tech-card">
+              <h3>Multi-tenant architecture</h3>
+              <p>Tenant isolation, data partitions, and shared services for scale.</p>
+            </article>
+            <article className="tech-card">
+              <h3>AWS</h3>
+              <p>Reliable hosting, storage, and managed cloud services.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Docker</h3>
+              <p>Containerized deployments that stay consistent across environments.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Kubernetes</h3>
+              <p>Orchestration for high availability and efficient scaling.</p>
+            </article>
+            <article className="tech-card">
+              <h3>CI/CD</h3>
+              <p>Automated builds, tests, and releases to ship faster.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="seo-section">
+        <div className="seo-container">
           <h2>Why choose Ananta Byte for SaaS?</h2>
           <ul className="seo-list">
             <li>Rapid MVPs to validate market fit.</li>
@@ -98,17 +128,25 @@ export default function Saas() {
         </div>
       </section>
 
-      <section className="faq-section">
+      <FAQ
+        items={[
+          { q: "Do you support multi-tenant SaaS?", a: "We design tenant isolation, data partitioning, and secure auth patterns." },
+          { q: "Can you integrate payments?", a: "We integrate subscription billing providers and custom billing flows." }
+        ]}
+        title="Frequently asked questions"
+        subtitle="Clear answers on multi-tenant design, billing systems, and SaaS delivery"
+      />
+
+      <section className="seo-section alt">
         <div className="seo-container">
-          <h2>Frequently asked questions</h2>
-          <div className="faq-item">
-            <h4>Do you support multi-tenant SaaS?<span>Yes</span></h4>
-            <div className="faq-answer">We design tenant isolation, data partitioning, and secure auth patterns.</div>
-          </div>
-          <div className="faq-item">
-            <h4>Can you integrate payments?<span>Yes</span></h4>
-            <div className="faq-answer">We integrate subscription billing providers and custom billing flows.</div>
-          </div>
+          <h2>Explore related services</h2>
+          <p>Combine SaaS expertise with product design and engineering partners.</p>
+          <ul className="seo-link-list">
+            <li><Link to="/web-development">Web development</Link></li>
+            <li><Link to="/mobile-app-development">Mobile app development</Link></li>
+            <li><Link to="/ui-ux-design">UI/UX design</Link></li>
+            <li><Link to="/technology-stack">Technology stack</Link></li>
+          </ul>
         </div>
       </section>
 

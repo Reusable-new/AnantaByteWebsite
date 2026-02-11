@@ -11,15 +11,15 @@ export default function MobileAppDevelopment() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Mobile App Development",
-    description: "iOS and Android app development, native and cross-platform mobile apps.",
+    description: "Mobile app development for iOS and Android, including native and cross-platform apps.",
     url: "https://anantabyte.com/mobile-app-development",
     provider: { "@type": "Organization", name: "AnantaByte", url: "https://anantabyte.com" }
   };
   return (
     <main className="seo-page">
       <SEO
-        title="Mobile App Development Services | AnantaByte"
-        description="iOS and Android app development for startups and enterprises. Build reliable apps with polished UI and scalable back ends."
+        title="Mobile App Development Company | iOS & Android Apps | AnantaByte"
+        description="Mobile app development company building iOS and Android apps with Flutter, React Native, Swift, Kotlin, and Firebase."
         path="/mobile-app-development"
         image="/image/mobile-og.svg"
         jsonLd={serviceJsonLd}
@@ -38,7 +38,7 @@ export default function MobileAppDevelopment() {
             <Link className="btn-secondary" to="/web-development" data-cta="Mobile Web">See web development</Link>
           </div>
           <div className="seo-hero-visual">
-            <img src="/image/hero-screen.svg" alt="Mobile app illustration" />
+            <img className="seo-hero-img" src="/image/hero-screen.svg" alt="Mobile app illustration" />
           </div>
         </div>
       </section>
@@ -47,6 +47,35 @@ export default function MobileAppDevelopment() {
         <div className="seo-container">
           <h2>Native and cross-platform expertise</h2>
           <p>We deliver performant mobile apps using native SDKs or cross-platform frameworks depending on product needs. We focus on retention-driving UX patterns, reliable offline behavior, and integration with analytics and push systems to help you grow.</p>
+        </div>
+      </section>
+
+      <section className="seo-section alt">
+        <div className="seo-container">
+          <h2>Technologies we use for mobile app development</h2>
+          <p>As a mobile app development company, we build iOS and Android apps with native performance, secure data handling, and fast release cycles.</p>
+          <div className="tech-grid">
+            <article className="tech-card">
+              <h3>Flutter</h3>
+              <p>High-performance cross-platform apps with a single codebase.</p>
+            </article>
+            <article className="tech-card">
+              <h3>React Native</h3>
+              <p>Reusable UI components for faster delivery across platforms.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Swift</h3>
+              <p>Native iOS development for smooth UX and system integration.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Kotlin</h3>
+              <p>Modern Android development with reliable performance.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Firebase</h3>
+              <p>Authentication, analytics, and push messaging at scale.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -118,6 +147,19 @@ export default function MobileAppDevelopment() {
             <li>Push notifications, offline support, and secure auth.</li>
             <li>Payments, subscriptions, and analytics tracking.</li>
             <li>App store optimization and release management.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="seo-section">
+        <div className="seo-container">
+          <h2>Explore related services</h2>
+          <p>Build a connected product experience with these specialized teams.</p>
+          <ul className="seo-link-list">
+            <li><Link to="/web-development">Web development</Link></li>
+            <li><Link to="/saas">SaaS application development</Link></li>
+            <li><Link to="/ui-ux-design">UI/UX design</Link></li>
+            <li><Link to="/technology-stack">Technology stack</Link></li>
           </ul>
         </div>
       </section>

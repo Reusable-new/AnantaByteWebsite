@@ -1,5 +1,6 @@
 import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
+import FAQ from "../components/FAQ";
 
 function openContact() {
   window.dispatchEvent(new CustomEvent('open-contact'));
@@ -10,15 +11,15 @@ export default function UiUxDesign() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "UI UX Design",
-    description: "Product strategy, UX research, and UI design to increase engagement and conversions.",
+    description: "UI UX design with research, prototyping, and design systems that improve engagement and conversions.",
     url: "https://anantabyte.com/ui-ux-design",
     provider: { "@type": "Organization", name: "AnantaByte", url: "https://anantabyte.com" }
   };
   return (
     <main className="seo-page">
       <SEO
-        title="UI UX Design Services | AnantaByte"
-        description="Product strategy, UX research, and UI design that turns ideas into lovable digital experiences."
+        title="UI/UX Design Company | Product & UX Research | AnantaByte"
+        description="UI/UX design company delivering research-led interfaces with Figma, Adobe XD, user research, and prototyping."
         path="/ui-ux-design"
         image="/image/design-og.svg"
         jsonLd={serviceJsonLd}
@@ -36,7 +37,7 @@ export default function UiUxDesign() {
             <Link className="btn-secondary" to="/web-development" data-cta="Design Pair">Pair with development</Link>
           </div>
           <div className="seo-hero-visual">
-            <img src="/image/mission-illustration.svg" alt="Design illustration" />
+            <img className="seo-hero-img" src="/image/mission-illustration.svg" alt="Design illustration" />
           </div>
         </div>
       </section>
@@ -45,6 +46,31 @@ export default function UiUxDesign() {
         <div className="seo-container">
           <h2>Design that converts</h2>
           <p>Our design work is research-driven: we validate assumptions, run usability tests, and craft UI systems that scale. We prioritize accessibility and conversion best practices so visual polish also drives measurable outcomes.</p>
+        </div>
+      </section>
+
+      <section className="seo-section alt">
+        <div className="seo-container">
+          <h2>Technologies we use for UI/UX design</h2>
+          <p>As a UI/UX design company, we use modern collaboration tools and research methods to build user-centered experiences that convert.</p>
+          <div className="tech-grid">
+            <article className="tech-card">
+              <h3>Figma</h3>
+              <p>Collaborative design systems and rapid prototyping.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Adobe XD</h3>
+              <p>High-fidelity UI design and stakeholder reviews.</p>
+            </article>
+            <article className="tech-card">
+              <h3>User Research</h3>
+              <p>Interviews, surveys, and testing to validate decisions.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Prototyping</h3>
+              <p>Clickable flows that align teams before build begins.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -68,19 +94,14 @@ export default function UiUxDesign() {
         </div>
       </section>
 
-      <section className="faq-section">
-        <div className="seo-container">
-          <h2>Frequently asked questions</h2>
-          <div className="faq-item">
-            <h4>Do you do user research?<span>Yes</span></h4>
-            <div className="faq-answer">We run interviews, usability tests, and analytics reviews to inform design choices.</div>
-          </div>
-          <div className="faq-item">
-            <h4>Can you hand off designs to devs?<span>Yes</span></h4>
-            <div className="faq-answer">We provide specs, assets, and tokens for smooth handoff.</div>
-          </div>
-        </div>
-      </section>
+      <FAQ
+        items={[
+          { q: "Do you do user research?", a: "We run interviews, usability tests, and analytics reviews to inform design choices." },
+          { q: "Can you hand off designs to devs?", a: "We provide specs, assets, and tokens for smooth handoff." }
+        ]}
+        title="Frequently asked questions"
+        subtitle="Design research, handoff, and collaboration answers for product teams"
+      />
 
       <section className="seo-section alt">
         <div className="seo-container">
@@ -121,6 +142,19 @@ export default function UiUxDesign() {
             <li>Brand aligned UI kit and design system.</li>
             <li>Responsive layouts for web and mobile.</li>
             <li>Prototype flows for key journeys.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="seo-section">
+        <div className="seo-container">
+          <h2>Explore related services</h2>
+          <p>Combine design with development to move faster and ship confidently.</p>
+          <ul className="seo-link-list">
+            <li><Link to="/web-development">Web development</Link></li>
+            <li><Link to="/mobile-app-development">Mobile app development</Link></li>
+            <li><Link to="/saas">SaaS application development</Link></li>
+            <li><Link to="/technology-stack">Technology stack</Link></li>
           </ul>
         </div>
       </section>

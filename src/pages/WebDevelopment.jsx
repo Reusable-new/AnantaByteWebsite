@@ -38,7 +38,7 @@ export default function WebDevelopment() {
             <Link className="btn-secondary" to="/saas" data-cta="Web SaaS">Explore SaaS development</Link>
           </div>
           <div className="seo-hero-visual">
-            <img src="/image/hero-illustration.svg" alt="Web development illustration" />
+            <img className="seo-hero-img" src="/image/hero-illustration.svg" alt="Web development illustration" />
           </div>
         </div>
       </section>

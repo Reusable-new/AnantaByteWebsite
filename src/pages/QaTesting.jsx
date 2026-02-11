@@ -1,5 +1,6 @@
 import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
+import FAQ from "../components/FAQ";
 
 function openContact() {
   window.dispatchEvent(new CustomEvent('open-contact'));
@@ -10,15 +11,15 @@ export default function QaTesting() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "QA & Testing Services",
-    description: "Functional, automated, performance, and security testing services to ensure reliability.",
+    description: "QA and testing services covering manual QA, automation, performance, and security testing.",
     url: "https://anantabyte.com/qa-testing",
     provider: { "@type": "Organization", name: "AnantaByte", url: "https://anantabyte.com" }
   };
   return (
     <main className="seo-page">
       <SEO
-        title="QA & Testing Services | AnantaByte"
-        description="Comprehensive QA and testing services including automated and manual testing, performance, and security testing to ensure reliability."
+        title="QA & Testing Services | Automation & Manual QA | AnantaByte"
+        description="QA and testing services using Selenium, Cypress, Jest, manual testing, and automation testing to keep releases reliable."
         path="/qa-testing"
         image="/image/qa-og.svg"
         jsonLd={serviceJsonLd}
@@ -38,7 +39,7 @@ export default function QaTesting() {
             <Link className="btn-secondary" to="/web-development" data-cta="QA Web">See web services</Link>
           </div>
           <div className="seo-hero-visual">
-            <img src="/image/hero-illustration.svg" alt="QA testing illustration" />
+            <img className="seo-hero-img" src="/image/hero-illustration.svg" alt="QA testing illustration" />
           </div>
         </div>
       </section>
@@ -59,6 +60,35 @@ export default function QaTesting() {
               <h3>Performance & Security</h3>
               <p>Load tests and vulnerability scans to identify risks.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="seo-section">
+        <div className="seo-container">
+          <h2>Technologies we use for QA & testing</h2>
+          <p>Our QA and testing services blend manual expertise with automation frameworks to protect quality at every release.</p>
+          <div className="tech-grid">
+            <article className="tech-card">
+              <h3>Selenium</h3>
+              <p>Cross-browser automated testing for critical user flows.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Cypress</h3>
+              <p>Fast, reliable end-to-end testing for modern web apps.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Jest</h3>
+              <p>Unit and integration tests that catch regressions early.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Manual Testing</h3>
+              <p>Exploratory checks for usability and edge cases.</p>
+            </article>
+            <article className="tech-card">
+              <h3>Automation Testing</h3>
+              <p>CI-ready suites that speed up releases with confidence.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -90,19 +120,27 @@ export default function QaTesting() {
         </div>
       </section>
 
-      <section className="faq-section">
+      <section className="seo-section">
         <div className="seo-container">
-          <h2>Frequently asked questions</h2>
-          <div className="faq-item">
-            <h4>Do you provide automated test suites?<span>Yes</span></h4>
-            <div className="faq-answer">We write end-to-end and integration test suites tailored to your stack.</div>
-          </div>
-          <div className="faq-item">
-            <h4>Can you integrate testing into CI/CD?<span>Yes</span></h4>
-            <div className="faq-answer">We configure pipelines to run tests and gate releases based on results.</div>
-          </div>
+          <h2>Explore related services</h2>
+          <p>Ensure quality across the full product lifecycle with these teams.</p>
+          <ul className="seo-link-list">
+            <li><Link to="/web-development">Web development</Link></li>
+            <li><Link to="/mobile-app-development">Mobile app development</Link></li>
+            <li><Link to="/saas">SaaS application development</Link></li>
+            <li><Link to="/technology-stack">Technology stack</Link></li>
+          </ul>
         </div>
       </section>
+
+      <FAQ
+        items={[
+          { q: "Do you provide automated test suites?", a: "We write end-to-end and integration test suites tailored to your stack." },
+          { q: "Can you integrate testing into CI/CD?", a: "We configure pipelines to run tests and gate releases based on results." }
+        ]}
+        title="Frequently asked questions"
+        subtitle="Answers about automation, CI/CD integration, and QA coverage"
+      />
     </main>
   );
 }

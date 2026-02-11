@@ -28,6 +28,7 @@ const WebDevelopmentBengaluru = lazy(() => import("./pages/WebDevelopmentBengalu
 const SoftwareDevelopmentDelhi = lazy(() => import("./pages/SoftwareDevelopmentDelhi"));
 const SaasMvpGuide = lazy(() => import("./pages/SaasMvpGuide"));
 const ProductDiscoveryWorkshop = lazy(() => import("./pages/ProductDiscoveryWorkshop"));
+const TechnologyStack = lazy(() => import("./pages/TechnologyStack"));
 
 const SITE_URL = import.meta.env.VITE_SITE_URL || "https://anantabyte.com";
 
@@ -197,6 +198,7 @@ export default function App() {
           <Route path="/software-development-delhi" element={<SoftwareDevelopmentDelhi />} />
           <Route path="/saas-mvp-guide" element={<SaasMvpGuide />} />
           <Route path="/product-discovery-workshop" element={<ProductDiscoveryWorkshop />} />
+          <Route path="/technology-stack" element={<TechnologyStack />} />
         </Routes>
       </Suspense>
     </>

@@ -10,7 +10,7 @@ export default function TechnologyStack() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Technology Stack",
-    description: "Technology stack for web, mobile, SaaS, AI chatbot, design, and QA services delivered by AnantaByte.",
+    description: "Technology stack for web, mobile, SaaS, AI chatbot,  and QA services delivered by AnantaByte.",
     url: "https://anantabyte.com/technology-stack",
     publisher: { "@type": "Organization", name: "AnantaByte", url: "https://anantabyte.com" }
   };

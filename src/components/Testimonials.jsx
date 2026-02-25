@@ -49,10 +49,20 @@ function TestCard({ name, role, text, img }) {
 
 export default function Testimonials() {
   const items = [
-    { img: "/image/avatar1.svg", name: "Gaurav", role: "UI/UX work", text: "Clean, modern UI/UX with thoughtful flows that improved usability and user confidence." },
-    { img: "/image/avatar2.svg", name: "Guarav", role: "SalonIQ", text: "Delivered a polished SalonIQ experience with smooth booking and clear service journeys." },
-    { img: "/image/avatar3.svg", name: "Mohit", role: "QA report", text: "Detailed QA reporting that caught edge cases early and raised overall product quality." }
-  ];
+  { 
+    img: "/image/avatar1.svg", 
+    name: "Gaurav", 
+    role: "UI/UX Work", 
+    text: "Clean, modern UI/UX with thoughtful flows that improved usability and user confidence." 
+  },
+
+  { 
+    img: "/image/avatar3.svg", 
+    name: "Testimonials Coming Soon 🚀", 
+    role: "Early Access Program", 
+    text: "We are currently onboarding our first partner salons for beta access. Real customer testimonials and success stories will be published soon as we complete live deployments." 
+  }
+];
 
   return (
     <section className="testimonials" id="testimonials">

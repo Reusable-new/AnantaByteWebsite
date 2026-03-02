@@ -38,7 +38,7 @@ export default function Saas() {
             operability.
           </p>
           <div className="seo-hero-cta">
-            <button className="btn-primary" onClick={openContact} data-cta="SaaS Contact">Talk about SaaS</button>
+            <button type="button" className="btn-primary" onClick={openContact} data-cta="SaaS Contact">Talk about SaaS</button>
             <Link className="btn-secondary" to="/saas-mvp-guide" data-cta="SaaS Guide">SaaS MVP guide</Link>
           </div>
           <div className="seo-hero-visual">
@@ -154,7 +154,7 @@ export default function Saas() {
         <div className="seo-container">
           <h2>Ready to build a SaaS product?</h2>
           <p>We can scope an MVP, build secure multi-tenant platforms, and support you post-launch.</p>
-          <button className="btn-primary" onClick={() => goContact(navigate)} data-cta="SaaS Schedule">Schedule a call</button>
+          <button type="button" className="btn-primary" onClick={openContact} data-cta="SaaS Schedule">Schedule a call</button>
         </div>
       </section>
     </main>

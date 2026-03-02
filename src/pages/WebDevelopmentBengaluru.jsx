@@ -1,5 +1,9 @@
 import SEO from "../components/SEO";
 
+function openContact() {
+  window.dispatchEvent(new CustomEvent('open-contact'));
+}
+
 export default function WebDevelopmentBengaluru() {
   return (
     <main className="seo-page">
@@ -18,7 +22,7 @@ export default function WebDevelopmentBengaluru() {
             and development with a clear product focus.
           </p>
           <div className="seo-hero-cta">
-            <a className="btn-primary" href="/#contact">Request a proposal</a>
+            <button type="button" className="btn-primary" onClick={openContact}>Request a proposal</button>
             <a className="btn-secondary" href="/web-development">Explore web services</a>
           </div>
         </div>
@@ -26,7 +30,7 @@ export default function WebDevelopmentBengaluru() {
 
       <section className="seo-section alt">
         <div className="seo-container">
-          <h2>Local focus, global delivery</h2>
+          <h2>Ready to start?</h2>
           <div className="seo-grid">
             <div className="seo-card">
               <h3>Startup friendly</h3>
@@ -70,7 +74,7 @@ export default function WebDevelopmentBengaluru() {
         <div className="seo-container">
           <h2>Build in Bengaluru with a proven partner</h2>
           <p>Share your goals and we will map the next steps.</p>
-          <a className="btn-primary" href="/#contact">Book a local consult</a>
+          <button type="button" className="btn-primary" onClick={openContact}>Book a local consult</button>
         </div>
       </section>
     </main>

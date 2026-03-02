@@ -1,11 +1,14 @@
 import React from 'react'
+import { auth } from '../utils/firebase';
+
+console.log('Firebase Auth:', auth);
 
 export default function Hero(){
   return (
     <section className="hero-section" id="home">
       <div className="hero-left">
-        <h1>Building Scalable <span className="accent">Web, Mobile, AI & SaaS</span></h1>
-        <p>End-to-end product development for startups and growing businesses. We build beautiful, high-performance apps that scale.</p>
+        <h1>Building Scalable <span className="accent">Web, Mobile, AI & SaaS Solutions</span></h1>
+        <p>AnantaByte is your trusted IT services and software development company. We deliver end-to-end custom solutions for startups and growing businesses—from web applications to SaaS platforms, mobile apps, and AI-powered solutions that drive real business growth.</p>
 
         <div className="hero-buttons">
           <a className="btn-primary" href="#contact" data-cta="Hero Get Started" data-cta-location="hero">Get Started</a>
@@ -13,7 +16,7 @@ export default function Hero(){
         </div>
 
         <div style={{marginTop:22, color:'var(--muted)', fontSize:14}}>
-          <strong>Trusted by startups & enterprises</strong>
+          <strong>✓ Trusted by startups & enterprises globally</strong>
         </div>
       </div>
 

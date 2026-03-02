@@ -2,11 +2,13 @@ import { useEffect, Suspense, lazy } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ContactModal from "./components/ContactModal";
-import Hero from "./components/Hero";
+import { Hero3D } from "./components/Hero3D";
 import Services from "./components/Services";
 import WhyChoose from "./components/WhyChoose";
+import Process from "./components/Process";
+import Industries from "./components/Industries";
+import TechStack from "./components/TechStack";
 import Mission from "./components/mission";
-import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
 import Contact from "./components/Contact";
@@ -29,6 +31,12 @@ const SoftwareDevelopmentDelhi = lazy(() => import("./pages/SoftwareDevelopmentD
 const SaasMvpGuide = lazy(() => import("./pages/SaasMvpGuide"));
 const ProductDiscoveryWorkshop = lazy(() => import("./pages/ProductDiscoveryWorkshop"));
 const TechnologyStack = lazy(() => import("./pages/TechnologyStack"));
+
+const Login = lazy(() => import("./admin/Login"));
+const Dashboard = lazy(() => import("./admin/Dashboard"));
+const ProtectedRoute = lazy(() => import("./admin/ProtectedRoute"));
+const Inquiries = lazy(() => import("./admin/Inquiries"));
+const TestimonialManager = lazy(() => import("./admin/TestimonialManager"));
 
 const SITE_URL = import.meta.env.VITE_SITE_URL || "https://anantabyte.com";
 
@@ -108,11 +116,13 @@ function Home() {
         path="/"
         jsonLd={homeJsonLd}
       />
-      <Hero />
+      <Hero3D />
       <Services />
       <WhyChoose />
+      <Process />
+      <Industries />
+      <TechStack />
       <Mission />
-      <Testimonials />
       <FAQ />
       <CTA />
       <Contact />
@@ -199,6 +209,31 @@ export default function App() {
           <Route path="/saas-mvp-guide" element={<SaasMvpGuide />} />
           <Route path="/product-discovery-workshop" element={<ProductDiscoveryWorkshop />} />
           <Route path="/technology-stack" element={<TechnologyStack />} />
+          <Route path="/admin/login" element={<Login />} />
+          <Route
+            path="/admin/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/inquiries"
+            element={
+              <ProtectedRoute>
+                <Inquiries />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/testimonials"
+            element={
+              <ProtectedRoute>
+                <TestimonialManager />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </Suspense>
     </>

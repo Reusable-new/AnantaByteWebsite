@@ -1,5 +1,9 @@
 import SEO from "../components/SEO";
 
+function openContact() {
+  window.dispatchEvent(new CustomEvent('open-contact'));
+}
+
 export default function ProductDiscoveryWorkshop() {
   return (
     <main className="seo-page">
@@ -17,7 +21,7 @@ export default function ProductDiscoveryWorkshop() {
             Our discovery workshop reduces risk and accelerates product decisions.
           </p>
           <div className="seo-hero-cta">
-            <a className="btn-primary" href="/#contact">Book the workshop</a>
+            <button type="button" className="btn-primary" onClick={openContact}>Book the workshop</button>
             <a className="btn-secondary" href="/ui-ux-design">Design after discovery</a>
           </div>
         </div>
@@ -70,7 +74,7 @@ export default function ProductDiscoveryWorkshop() {
         <div className="seo-container">
           <h2>Start with a clear plan</h2>
           <p>We can run the workshop remotely or on site.</p>
-          <a className="btn-primary" href="/#contact">Schedule discovery</a>
+          <button type="button" className="btn-primary" onClick={openContact}>Schedule discovery</button>
         </div>
       </section>
     </main>

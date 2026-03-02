@@ -1,5 +1,9 @@
 import SEO from "../components/SEO";
 
+function openContact() {
+  window.dispatchEvent(new CustomEvent('open-contact'));
+}
+
 export default function SaasMvpGuide() {
   return (
     <main className="seo-page">
@@ -17,7 +21,7 @@ export default function SaasMvpGuide() {
             covers scope, timeline, and the signals that matter most.
           </p>
           <div className="seo-hero-cta">
-            <a className="btn-primary" href="/#contact">Request the MVP checklist</a>
+            <button type="button" className="btn-primary" onClick={openContact}>Request the MVP checklist</button>
             <a className="btn-secondary" href="/saas">See SaaS services</a>
           </div>
         </div>
@@ -71,7 +75,7 @@ export default function SaasMvpGuide() {
         <div className="seo-container">
           <h2>Need help with your SaaS MVP?</h2>
           <p>We can run discovery, build the MVP, and support the launch.</p>
-          <a className="btn-primary" href="/#contact">Start a discovery sprint</a>
+          <button type="button" className="btn-primary" onClick={openContact}>Start a discovery sprint</button>
         </div>
       </section>
     </main>

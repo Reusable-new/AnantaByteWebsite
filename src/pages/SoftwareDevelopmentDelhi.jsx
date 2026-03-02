@@ -1,5 +1,9 @@
 import SEO from "../components/SEO";
 
+function openContact() {
+  window.dispatchEvent(new CustomEvent('open-contact'));
+}
+
 export default function SoftwareDevelopmentDelhi() {
   return (
     <main className="seo-page">
@@ -18,7 +22,7 @@ export default function SoftwareDevelopmentDelhi() {
             that perform.
           </p>
           <div className="seo-hero-cta">
-            <a className="btn-primary" href="/#contact">Talk to the team</a>
+            <button type="button" className="btn-primary" onClick={openContact}>Talk to the team</button>
             <a className="btn-secondary" href="/mobile-app-development">See mobile services</a>
           </div>
         </div>
@@ -70,7 +74,7 @@ export default function SoftwareDevelopmentDelhi() {
         <div className="seo-container">
           <h2>Plan your next software build</h2>
           <p>We can start with a short discovery sprint.</p>
-          <a className="btn-primary" href="/#contact">Get a proposal</a>
+          <button type="button" className="btn-primary" onClick={openContact}>Get a proposal</button>
         </div>
       </section>
     </main>

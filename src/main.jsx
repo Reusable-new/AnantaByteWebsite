@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
 import './assets/style.css'
+import './styles/3d-effects.css'
 import './utils/scrollReveal'
 
 createRoot(document.getElementById('root')).render(

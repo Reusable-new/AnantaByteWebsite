@@ -34,7 +34,7 @@ export default function MobileAppDevelopment() {
             analytics to support growth.
           </p>
           <div className="seo-hero-cta">
-            <button className="btn-primary" onClick={openContact} data-cta="Mobile Plan">Plan your app</button>
+            <button type="button" className="btn-primary" onClick={openContact} data-cta="Mobile Plan">Plan your app</button>
             <Link className="btn-secondary" to="/web-development" data-cta="Mobile Web">See web development</Link>
           </div>
           <div className="seo-hero-visual">
@@ -168,7 +168,7 @@ export default function MobileAppDevelopment() {
         <div className="seo-container">
           <h2>Bring your app idea to life</h2>
           <p>We can ship an MVP or scale a mature product team.</p>
-          <button className="btn-primary" onClick={openContact} data-cta="Mobile Talk">Talk to the team</button>
+          <button type="button" className="btn-primary" onClick={openContact} data-cta="Mobile Talk">Talk to the team</button>
         </div>
       </section>
     </main>

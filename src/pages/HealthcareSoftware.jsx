@@ -1,5 +1,9 @@
 import SEO from "../components/SEO";
 
+function openContact() {
+  window.dispatchEvent(new CustomEvent('open-contact'));
+}
+
 export default function HealthcareSoftware() {
   return (
     <main className="seo-page">
@@ -17,7 +21,7 @@ export default function HealthcareSoftware() {
             We deliver stable platforms with strong data privacy and clear workflows.
           </p>
           <div className="seo-hero-cta">
-            <a className="btn-primary" href="/#contact">Build healthcare software</a>
+            <button type="button" className="btn-primary" onClick={openContact}>Build healthcare software</button>
             <a className="btn-secondary" href="/ui-ux-design">Prioritize patient UX</a>
           </div>
         </div>
@@ -69,7 +73,7 @@ export default function HealthcareSoftware() {
         <div className="seo-container">
           <h2>Improve patient outcomes with software</h2>
           <p>We help health teams ship reliable digital products.</p>
-          <a className="btn-primary" href="/#contact">Talk to a specialist</a>
+          <button type="button" className="btn-primary" onClick={openContact}>Talk to a specialist</button>
         </div>
       </section>
     </main>

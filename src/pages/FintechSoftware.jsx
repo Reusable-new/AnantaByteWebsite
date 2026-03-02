@@ -1,5 +1,9 @@
 import SEO from "../components/SEO";
 
+function openContact() {
+  window.dispatchEvent(new CustomEvent('open-contact'));
+}
+
 export default function FintechSoftware() {
   return (
     <main className="seo-page">
@@ -18,7 +22,7 @@ export default function FintechSoftware() {
             compromising trust.
           </p>
           <div className="seo-hero-cta">
-            <a className="btn-primary" href="/#contact">Discuss your fintech product</a>
+            <button type="button" className="btn-primary" onClick={openContact}>Discuss your fintech product</button>
             <a className="btn-secondary" href="/ai-ml-development">Add AI capabilities</a>
           </div>
         </div>
@@ -71,7 +75,7 @@ export default function FintechSoftware() {
         <div className="seo-container">
           <h2>Ship fintech with confidence</h2>
           <p>We can help you validate the MVP or scale a regulated platform.</p>
-          <a className="btn-primary" href="/#contact">Start a conversation</a>
+          <button type="button" className="btn-primary" onClick={openContact}>Start a conversation</button>
         </div>
       </section>
     </main>

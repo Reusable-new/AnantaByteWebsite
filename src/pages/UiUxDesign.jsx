@@ -33,7 +33,7 @@ export default function UiUxDesign() {
             We craft interfaces that feel intuitive, credible, and conversion ready.
           </p>
           <div className="seo-hero-cta">
-            <button className="btn-primary" onClick={openContact} data-cta="Design Start">Start design discovery</button>
+            <button type="button" className="btn-primary" onClick={openContact} data-cta="Design Start">Start design discovery</button>
             <Link className="btn-secondary" to="/web-development" data-cta="Design Pair">Pair with development</Link>
           </div>
           <div className="seo-hero-visual">
@@ -163,7 +163,7 @@ export default function UiUxDesign() {
         <div className="seo-container">
           <h2>Design experiences users trust</h2>
           <p>We can lead the full design track or collaborate with your team.</p>
-          <button className="btn-primary" onClick={openContact} data-cta="Design Quote">Request a quote</button>
+          <button type="button" className="btn-primary" onClick={openContact} data-cta="Design Quote">Request a quote</button>
         </div>
       </section>
     </main>

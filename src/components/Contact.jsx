@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { trackFormError, trackFormSubmit, trackFormSuccess } from "../utils/analytics";
+import { addInquiry } from "../utils/firebaseService";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -8,12 +9,28 @@ export default function Contact() {
     e.preventDefault()
     const form = e.target
     const formData = new FormData(form)
+    const name = formData.get('name')
+    const email = formData.get('email')
+    const phone = formData.get('phone')
+    const message = formData.get('message')
 
     if (isSubmitting) return
     setIsSubmitting(true)
     trackFormSubmit({ formId: "contact" })
 
     try {
+      // Save to Firebase
+      try {
+        await addInquiry({
+          name,
+          email,
+          phone,
+          message
+        })
+      } catch (fbError) {
+        console.error('Firebase error:', fbError)
+      }
+
       const res = await fetch(
         "https://script.google.com/macros/s/AKfycbz1K1QWAI_Y_BZyC0-dlfPARVfo-kfCLIWrkarUcfKnmKt5uObkvVpWikTQ2i60Cj4T/exec",
         {
@@ -71,7 +88,7 @@ export default function Contact() {
 
           <div className="full">
             <label htmlFor="message">Project Details</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea id="message" name="message" rows="3" required></textarea>
           </div>
 
           <button className={`send-btn ${isSubmitting ? "btn-loading" : ""}`} type="submit" disabled={isSubmitting}>

@@ -50,12 +50,12 @@ function ServiceCard({ bg, icon, title, text, to }) {
 
 export default function Services() {
   const items = [
-    { bg: "linear-gradient(90deg,#3b82f6,#60a5fa)", icon: "🌐", title: "Web Development", text: "Modern, responsive websites and web applications.", to: "/web-development" },
-    { bg: "linear-gradient(90deg,#06b6d4,#22d3ee)", icon: "📱", title: "Mobile App Development", text: "Native and cross-platform apps for iOS and Android.", to: "/mobile-app-development" },
-    { bg: "linear-gradient(90deg,#ec4899,#f472b6)", icon: "🤖", title: "AI Chatbot Development", text: "Intelligent chatbots for support, sales, and automation.", to: "/ai-ml-development" },
-    { bg: "linear-gradient(90deg,#38bdf8,#0ea5e9)", icon: "☁️", title: "SaaS Application Development", text: "Scalable SaaS platforms with secure multi-tenant architecture.", to: "/saas" },
-    { bg: "linear-gradient(90deg,#a855f7,#7c3aed)", icon: "🎨", title: "UI/UX Design", text: "User-centered design that improves engagement and conversion.", to: "/ui-ux-design" },
-    { bg: "linear-gradient(90deg,#22c55e,#4ade80)", icon: "🧪", title: "QA & Testing", text: "Comprehensive testing to ensure quality and reliability.", to: "/qa-testing" }
+    { bg: "linear-gradient(90deg,#3b82f6,#60a5fa)", icon: "🌐", title: "Web Application Development", text: "Custom, high-performance web apps, PWAs, and e-commerce solutions built with modern frameworks.", to: "/web-development" },
+    { bg: "linear-gradient(90deg,#06b6d4,#22d3ee)", icon: "📱", title: "Mobile App Development", text: "Native iOS and Android apps, plus cross-platform solutions with exceptional UX.", to: "/mobile-app-development" },
+    { bg: "linear-gradient(90deg,#ec4899,#f472b6)", icon: "🤖", title: "AI & Chatbot Solutions", text: "Intelligent NLP-based chatbots and AI solutions for automation and customer engagement.", to: "/ai-ml-development" },
+    { bg: "linear-gradient(90deg,#38bdf8,#0ea5e9)", icon: "☁️", title: "SaaS Product Development", text: "End-to-end SaaS development with multi-tenant architecture and subscription management.", to: "/saas" },
+    { bg: "linear-gradient(90deg,#a855f7,#7c3aed)", icon: "🎨", title: "UI/UX Design", text: "User-centered design that maximizes engagement, conversion, and user satisfaction.", to: "/ui-ux-design" },
+    { bg: "linear-gradient(90deg,#22c55e,#4ade80)", icon: "🧪", title: "QA & Testing", text: "Comprehensive automated and manual testing ensuring secure, reliable, bug-free products.", to: "/qa-testing" }
   ]
 
   return (

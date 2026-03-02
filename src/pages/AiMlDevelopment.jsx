@@ -34,7 +34,7 @@ export default function AiMlDevelopment() {
             and deliver measurable automation gains.
           </p>
           <div className="seo-hero-cta">
-            <button className="btn-primary" onClick={openContact} data-cta="AI Discuss">Discuss AI use cases</button>
+            <button type="button" className="btn-primary" onClick={openContact} data-cta="AI Discuss">Discuss AI use cases</button>
             <Link className="btn-secondary" to="/saas" data-cta="AI SaaS">AI for SaaS teams</Link>
           </div>
           <div className="seo-hero-visual">
@@ -168,7 +168,7 @@ export default function AiMlDevelopment() {
         <div className="seo-container">
           <h2>Make AI a real product advantage</h2>
           <p>We can scope a pilot or expand existing AI systems.</p>
-          <button className="btn-primary" onClick={openContact} data-cta="AI Schedule">Schedule a consult</button>
+          <button type="button" className="btn-primary" onClick={openContact} data-cta="AI Schedule">Schedule a consult</button>
         </div>
       </section>
     </main>

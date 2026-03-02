@@ -47,7 +47,7 @@ export default function WebDevelopment() {
             and scalable experiences that support revenue goals and global operations.
           </p>
           <div className="seo-hero-cta">
-            <button className="btn-primary" onClick={openContact} data-cta="Web Start">Book a strategy call</button>
+            <button type="button" className="btn-primary" onClick={openContact} data-cta="Web Start">Book a strategy call</button>
             <Link className="btn-secondary" to="/technology-stack" data-cta="Web Tech">View our technology stack</Link>
           </div>
           <div className="seo-hero-visual">
@@ -225,7 +225,7 @@ export default function WebDevelopment() {
         <div className="seo-container">
           <h2>Ready to build a high-performance web platform?</h2>
           <p>Tell us your goals and we will deliver a scalable plan with clear outcomes.</p>
-          <button className="btn-primary" onClick={openContact} data-cta="Web Book">Request a proposal</button>
+          <button type="button" className="btn-primary" onClick={openContact} data-cta="Web Book">Request a proposal</button>
         </div>
       </section>
     </main>

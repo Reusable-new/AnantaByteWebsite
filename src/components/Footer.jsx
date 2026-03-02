@@ -18,8 +18,8 @@ export default function Footer(){
         <div className="footer-col">
           <h5>Company</h5>
           <a href="/#about">About Us</a><br />
-          <a href="/web-development-bengaluru">Bengaluru</a><br />
-          <a href="/software-development-delhi">Delhi</a>
+          <a href="/#contact">Get Started</a><br />
+          <a href="/product-discovery-workshop">Workshops</a>
         </div>
         <div className="footer-col">
           <h5>Services</h5>

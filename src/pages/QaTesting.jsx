@@ -35,7 +35,7 @@ export default function QaTesting() {
             reduce risk and improve user confidence.
           </p>
           <div className="seo-hero-cta">
-            <button className="btn-primary" onClick={openContact} data-cta="QA Contact">Request QA support</button>
+            <button type="button" className="btn-primary" onClick={openContact} data-cta="QA Contact">Request QA support</button>
             <Link className="btn-secondary" to="/web-development" data-cta="QA Web">See web services</Link>
           </div>
           <div className="seo-hero-visual">
@@ -97,7 +97,7 @@ export default function QaTesting() {
         <div className="seo-container">
           <h2>Keep releases safe and predictable</h2>
           <p>We can integrate testing into your CI/CD pipeline and provide ongoing QA support.</p>
-          <button className="btn-primary" onClick={openContact} data-cta="QA Schedule">Schedule a QA review</button>
+          <button type="button" className="btn-primary" onClick={openContact} data-cta="QA Schedule">Schedule a QA review</button>
         </div>
       </section>
       <section className="seo-section alt">
